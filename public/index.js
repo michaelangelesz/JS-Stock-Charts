@@ -47,6 +47,9 @@ async function main() {
         type: 'bar',
         data: {
             labels: stocks.map(stock => stock.meta.symbol),
+            datasets: [{
+                
+            }]
         }
     });
     
