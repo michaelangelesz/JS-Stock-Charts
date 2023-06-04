@@ -69,6 +69,12 @@ async function main() {
             labels: stocks.map(stock => stock.meta.symbol),
             datasets: [{
                 label: 'Average', 
+                backgroundColor: stocks.map(stock => (
+                    getColor(stock.meta.symbol)
+                )),
+                borderColor: stocks.map(stock => (
+                    getColor(stock.meta.symbol)
+                )), 
             }] 
         }
     });
