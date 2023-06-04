@@ -24,7 +24,7 @@ async function main() {
 
   //const response = await fetch(`https://api.twelvedata.com/time_series?symbol=GME,MSFT,DIS,BNTX&interval=1day&apikey=1b2d091a1ecd404ab9dfcbd862828a3f`)
 
-  const result = await response.json();
+  //const result = await response.json();
 
   const { GME, MSFT, DIS, BNTX } = mockData;
 
