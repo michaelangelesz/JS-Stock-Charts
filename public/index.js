@@ -25,6 +25,7 @@ async function main() {
         }
     });
     
+    console.log(stocks[0].values)                                                
     
 }
 
