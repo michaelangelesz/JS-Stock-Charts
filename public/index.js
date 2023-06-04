@@ -67,6 +67,9 @@ async function main() {
         type: 'pie',
         data: {
             labels: stocks.map(stock => stock.meta.symbol),
+            datasets: [{
+
+            }] 
         }
     });
 
