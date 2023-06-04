@@ -61,6 +61,12 @@ async function main() {
             }]
         }
     });
+
+     /** Average (pie chart) */
+     new Chart(averagePriceChartCanvas.getContext('2d'), {
+        
+    });
+
 }
 
 function findHighest(values) {
