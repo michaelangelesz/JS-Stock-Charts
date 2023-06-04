@@ -68,7 +68,7 @@ async function main() {
         data: {
             labels: stocks.map(stock => stock.meta.symbol),
             datasets: [{
-
+                label: 'Average', 
             }] 
         }
     });
