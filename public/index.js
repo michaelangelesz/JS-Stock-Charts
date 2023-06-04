@@ -75,8 +75,11 @@ async function main() {
                 borderColor: stocks.map(stock => (
                     getColor(stock.meta.symbol)
                 )), 
+                data: stocks.map(stock => (
+                    calculateAverage(stock.values)
+                )) 
             }] 
-        }
+        } 
     });
 
 }
