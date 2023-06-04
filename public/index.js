@@ -66,7 +66,7 @@ async function main() {
      new Chart(averagePriceChartCanvas.getContext('2d'), {
         type: 'pie',
         data: {
-            
+            labels: stocks.map(stock => stock.meta.symbol),
         }
     });
 
