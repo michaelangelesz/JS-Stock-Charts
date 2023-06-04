@@ -18,7 +18,7 @@ async function main() {
     const highestPriceChartCanvas = document.querySelector('#highest-price-chart');
     const averagePriceChartCanvas = document.querySelector('#average-price-chart');
 
-    const response = await fetch(`https://api.twelvedata.com/time_series?symbol=GME,MSFT,DIS,BNTX&interval=1day&apikey=13ece79b899d406882ee98402016f0b6`)
+    const response = await fetch(`https://api.twelvedata.com/time_series?symbol=GME,MSFT,DIS,BNTX&interval=1day&apikey=1b2d091a1ecd404ab9dfcbd862828a3f`)
 
     const result = await response.json()
 
@@ -81,7 +81,6 @@ async function main() {
             }] 
         } 
     });
-
 }
 
 function findHighest(values) {
@@ -92,6 +91,14 @@ function findHighest(values) {
         }
     })
     return highest
+} 
+
+function calculateAverage(values) {
+    let total = 0;
+    values.forEach(value => {
+        total += parseFloat(value.high)
+    })
+    return total / values.length
 } 
 
 main() 
