@@ -27,6 +27,8 @@ async function main() {
 
     const stocks = [GME, MSFT, DIS, BNTX];
 
+    stocks.forEach( stock => stock.values.reverse())
+
     //Time
     new Chart(timeChartCanvas.getContext('2d'), {
         type: 'line',
