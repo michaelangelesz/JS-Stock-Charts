@@ -46,7 +46,7 @@ async function main() {
     new Chart(highestPriceChartCanvas.getContext('2d'), {
         type: 'bar',
         data: {
-            
+            labels: stocks.map(stock => stock.meta.symbol),
         }
     });
     
