@@ -42,7 +42,7 @@ async function main() {
         }
     });    
     
-    /** High (bar chart) */ 
+    /** High (bar chart) */
     new Chart(highestPriceChartCanvas.getContext('2d'), {
         type: 'bar',
         data: {
@@ -55,10 +55,12 @@ async function main() {
                 borderColor: stocks.map(stock => (
                     getColor(stock.meta.symbol)
                 )),
+                data: stocks.map(stock => (
+                    findHighest(stock.values) 
+                )) 
             }]
         }
     });
-    
 }
 
-main()
+main() 
