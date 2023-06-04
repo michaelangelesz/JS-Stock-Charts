@@ -19,9 +19,9 @@ async function main() {
             labels: stocks[0].values.map(value => value.datetime),
             datasets: stocks.map( stock => ({
                 label: stock.meta.symbol,
-                data: [12, 19, 3, 5, 2, 3],
                 backgroundColor:  'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)'
+                borderColor: 'rgba(255, 99, 132, 1)',
+                data: stock.values.map(value => parseFloat(value.high))
             }))
         }
     });                                              
