@@ -14,7 +14,6 @@ function getColor(stock){
 }
 
 async function main() {
-
     const timeChartCanvas = document.querySelector('#time-chart');
     const highestPriceChartCanvas = document.querySelector('#highest-price-chart');
     const averagePriceChartCanvas = document.querySelector('#average-price-chart');
@@ -29,7 +28,7 @@ async function main() {
 
     stocks.forEach( stock => stock.values.reverse())
 
-    //Time
+    /** Time (line chart) */
     new Chart(timeChartCanvas.getContext('2d'), {
         type: 'line',
         data: {
@@ -41,7 +40,12 @@ async function main() {
                 data: stock.values.map(value => parseFloat(value.high))
             }))
         }
-    });                                              
+    });    
+    
+    /** High (bar chart) */ 
+    new Chart(highestPriceChartCanvas.getContext('2d'), {
+       
+    });
     
 }
 
