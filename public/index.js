@@ -63,4 +63,14 @@ async function main() {
     });
 }
 
+function findHighest(values) {
+    let highest = 0;
+    values.forEach(value => {
+        if (parseFloat(value.high) > highest) {
+            highest = value.high
+        }
+    })
+    return highest
+} 
+
 main() 
