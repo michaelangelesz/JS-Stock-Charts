@@ -44,7 +44,8 @@ async function main() {
     
     /** High (bar chart) */ 
     new Chart(highestPriceChartCanvas.getContext('2d'), {
-       
+        type: 'bar',
+        
     });
     
 }
